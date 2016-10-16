@@ -3,6 +3,10 @@ var ReactDOM = require('react-dom');
 var $ = require('jquery');
 
 var Main = React.createClass({
+  // this.state = {
+  //   location: '',
+  //   temp: ''
+  // },
   render: function(){
     return(
       <div>
@@ -12,11 +16,25 @@ var Main = React.createClass({
     )
   },
   submit: function(e){
-    e.preventDefault();
     return(
       $.get(this.props.source + this.state.location, function(){
-        alert(this.props.source + this.state.location);
+        console.log(this.props.source + this.state.location);
       }.bind(this))
+    )
+  }
+});
+
+var weatherDisplay = React.createClass({
+render: function(){
+    return(
+      <div className="weatherComp">
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
     )
   }
 });
