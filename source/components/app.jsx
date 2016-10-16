@@ -24,11 +24,14 @@ var Main = React.createClass({
     for(var i = 0; i < weather.length; i++){
       if (i < weather.length) {
         weatherArray.push(
-          <div>
+          <div className="daily-weather" key={i}>
             <h3>{weather[i].date}</h3>
-            <div>{weather[i].weatherType.type}</div>
-            <div>High: {weather[i].temp.high}</div>
-            <div>Low: {weather[i].temp.low}</div>
+            <br />
+            <div className="weather-type deets">{weather[i].weatherType.type}</div>
+            <div className="temp-high deets">High: {weather[i].temp.high}</div>
+            <div className="temp-low deets">Low: {weather[i].temp.low}</div>
+            <br />
+            <br />
           </div>
         )
       }
