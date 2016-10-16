@@ -1,21 +1,18 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
+var SubmitButton = require('./SubmitButton');
 var $ = require('jquery');
 
 var Main = React.createClass({
-  // this.state = {
-  //   location: '',
-  //   temp: ''
-  // },
   render: function(){
     return(
       <div>
         <input placeholder="Location" onChange={(e) => this.setState({location: e.target.value})}/>
-        <button type="submit" onClick={(e) => this.submit(e)}>Submit</button>
+        <SubmitButton />
       </div>
     )
   },
-  submit: function(e){
+  setLocation: function(e){
     return(
       $.get(this.props.source + this.state.location, function(){
         console.log(this.props.source + this.state.location);
