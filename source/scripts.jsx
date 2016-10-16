@@ -11,14 +11,14 @@ var Main = React.createClass({
       </div>
     )
   },
-  submit: function(){
+  submit: function(e){
+    e.preventDefault();
     return(
-      $.get("https://weatherly-api.herokuapp.com/api/weather", function(){
-        alert('this workś')
-      })
+      $.get(this.props.source + this.state.location, function(){
+        alert(this.props.source + this.state.location);
+      }.bind(this))
     )
   }
-
 });
 
-ReactDOM.render(<Main />, document.getElementById('application'));
+ReactDOM.render(<Main source='https://weatherly-api.herokuapp.com/api/weather/'/>, document.getElementById('application'));
