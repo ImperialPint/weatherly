@@ -40,6 +40,7 @@ var Main = React.createClass({
     return(
       <div className="entire-page">
         <div className="header">
+        <h1 className = "welcome">Welcome To Weatherly</h1>
           <input className="user-location" placeholder="Location" onChange={(e) => this.setState({location: e.target.value})}/>
           <button className="submit-button" type="submit" onClick={(e) => this.getWeatherLocation(e)}>Submit</button>
         </div>

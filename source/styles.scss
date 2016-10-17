@@ -1,13 +1,34 @@
-body {
-  background-color:skyblue;
-}
-h3{
-  display: flex;
-}
-
-.daily-weather{
+@mixin flex-display{
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+// variable
+$display-flex: flex;
+$justify-center: center;
+$align-center: center;
+$primary-font: 'Bungee Inline', cursive;
+$primary-blue: steelblue;
+$hover-color:lightcoral;
+
+
+body {
+  background-color:$primary-blue;
+}
+h3{
+  @include flex-display;
+}
+
+
+.welcome{
+font-size: 43px;
+color: white;
+margin-top: 50px;
+font-family: $primary-font;
+
+}
+.daily-weather{
+  @include flex-display;
   flex-direction: column;
   border: 1px solid gray;
   padding-left: 25px;
@@ -15,7 +36,7 @@ h3{
 
 .user-location{
   display: block;
-  margin: 200px auto 10px auto;
+  margin: 50px auto 10px auto;
 }
 
 .header{
@@ -25,11 +46,12 @@ h3{
 .submit-button{
   display: block;
   margin: 10px auto;
-  background-color: blue;
+  background-color: cornflowerblue;
   border:none;
   color:white;
   font-size: 15px;
   padding: 5px 10px;
 }
 .submit-button:hover{
+  background-color: $hover-color;
 }
