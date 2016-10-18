@@ -37,6 +37,8 @@ var Main = React.createClass({
         )
       }
     }
+
+    
     return(
       <div className="entire-page">
         <div className="header">
