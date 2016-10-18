@@ -80,6 +80,10 @@ $secondary-font:'Oswald', sans-serif;
   background: url('../images/Cloudywhite.svg') no-repeat;
   @include image-display;
 }
+.foggy{
+  background: url('../images/Foggywhite.svg') no-repeat;
+  @include image-display;
+}
 .submit-button{
   display: block;
   margin: 10px auto;
