@@ -27,7 +27,7 @@ var Main = React.createClass({
           <div className="daily-weather" key={i}>
             <h3>{weather[i].date}</h3>
             <br />
-            <div className="weather-type deets">{weather[i].weatherType.type}</div>
+            <div className={weather[i].weatherType.type}></div>
             <div className="change deets">{weather[i].weatherType.chance * 100}%</div>
             <div className="temp-high deets">High: {weather[i].temp.high}°F</div>
             <div className="temp-low deets">Low: {weather[i].temp.low}°F</div>

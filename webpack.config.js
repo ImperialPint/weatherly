@@ -18,7 +18,9 @@ module.exports = {
     loaders: [
       { test: /\.css$/, loader: "style!css" },
       { test: /\.scss$/, loader: "style!css!sass" },
-      { test: /\.jsx?$/, exclude: '/node_modules/', loader: 'babel-loader' }
+      { test: /\.jsx?$/, exclude: '/node_modules/', loader: 'babel-loader' },
+      { test: /\.svg$/, loader: 'svg-url-loader' },
+      {test: /\.(jpg|png)$/,loader: 'file?name=[path][name].[hash].[ext]'}
     ]
   },
   plugins: [
