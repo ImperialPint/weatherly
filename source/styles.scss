@@ -4,6 +4,7 @@
   align-items: center;
 }
 
+
 @mixin image-display{
   background-size: contain;
   width: 50px;
@@ -19,6 +20,7 @@ $primary-blue: midnightblue;
 $hover-color:lightcoral;
 $secondary-font:'Oswald', sans-serif;
 
+
 body {
   background-color:$primary-blue;
 }
@@ -33,6 +35,7 @@ h3{
   margin-top: 50px;
   font-family: $primary-font;
 }
+
 $secondary-font:'Oswald', sans-serif;
 .daily-weather{
   display: flex;
