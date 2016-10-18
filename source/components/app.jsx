@@ -16,8 +16,11 @@ var Main = React.createClass({
 
     $.get(apiURL, function(response){
       this.setState({weather: response})
-    }.bind(this))
+      var stringifiedWeather = JSON.stringify(this.state)
+      localStorage.setItem('weather', stringifiedWeather)
+    }.bind(this));
   },
+
   render: function(){
     let weather = this.state.weather;
     let weatherArray = [];
@@ -51,7 +54,15 @@ var Main = React.createClass({
         </div>
       </div>
     )
+  },
+  
+  componentDidMount: function() {
+    let weatherFromLocal = JSON.parse(localStorage.getItem('weather'))
+      if (weatherFromLocal !== []) {
+        this.setState({location: weatherFromLocal.location, weather: weatherFromLocal.weather})
+      }
   }
 });
+
 
 ReactDOM.render(<Main source='https://weatherly-api.herokuapp.com/api/weather/'/>, document.getElementById('application'));

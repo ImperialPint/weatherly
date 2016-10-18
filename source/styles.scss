@@ -15,7 +15,7 @@ $display-flex: flex;
 $justify-center: center;
 $align-center: center;
 $primary-font: 'Bungee Inline', cursive;
-$primary-blue: steelblue;
+$primary-blue: midnightblue;
 $hover-color:lightcoral;
 $secondary-font:'Oswald', sans-serif;
 
@@ -95,4 +95,8 @@ $secondary-font:'Oswald', sans-serif;
 }
 .submit-button:hover{
   background-color: $hover-color;
+}
+
+@-ms-viewport{
+ width: auto;
 }
