@@ -43,12 +43,39 @@ h3{
 }
 
 .windy{
-  background: url('../images/cloudy.jpg') no-repeat;
+  background: url('../images/Windy.svg') no-repeat;
   background-size: contain;
   width: 50px;
   height: 50px;
 }
-
+.sunny{
+  background: url('../images/Sunny.svg') no-repeat;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  padding-bottom: 3px;
+}
+.thunder{
+  background: url('../images/tstorm.svg') no-repeat;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  padding-bottom: 3px;
+}
+.snow{
+  background: url('../images/Snowflake.svg') no-repeat;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  padding-bottom: 3px;
+}
+.rain{
+  background: url('../images/rain.svg') no-repeat;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  padding-bottom: 3px;
+}
 .submit-button{
   display: block;
   margin: 10px auto;
