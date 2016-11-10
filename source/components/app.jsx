@@ -55,11 +55,11 @@ var Main = React.createClass({
       </div>
     )
   },
-  
+
   componentDidMount: function() {
-    let weatherFromLocal = JSON.parse(localStorage.getItem('weather'))
-      if (weatherFromLocal !== []) {
-        this.setState({location: weatherFromLocal.location, weather: weatherFromLocal.weather})
+    let weatherLocalStorage = JSON.parse(localStorage.getItem('weather'))
+      if (weatherLocalStorage !== []) {
+        this.setState({location: weatherLocalStorage.location, weather: weatherLocalStorage.weather})
       }
   }
 });
